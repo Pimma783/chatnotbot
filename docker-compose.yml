@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  # 1. กำหนดชื่อ service ของแอปพลิเคชันของคุณ
+  # (สามารถเปลี่ยนชื่อได้ตามต้องการ เช่น 'chatbot-frontend')
+  mju-chatbot:
+    # 2. สั่งให้ Docker Build Image โดยใช้ Dockerfile ที่อยู่ใน Path ปัจจุบัน
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    # 3. กำหนดชื่อ Container ที่จะรัน
+    container_name: mju-chatbot-container
+
+    # 4. Map port
+    # 'Host Port:Container Port' - เปิดให้เข้าถึงผ่าน localhost:3000
+    ports:
+      - "3000:3000"
+
+    # 5. ตั้งค่า Environment Variables เพิ่มเติม (เช่น NODE_ENV)
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+
+    # 6. โหลด environment variables จากไฟล์ .env.local
+    env_file:
+      - .env.local
+
+    # 7. กำหนดการจัดการ Restart
+    # หาก Container ล่ม (Crash) ระบบจะพยายาม restart ใหม่เสมอ
+    restart: always

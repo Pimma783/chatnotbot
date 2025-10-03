@@ -1,9 +1,7 @@
 // app/api/chat/route.ts
 
-// ⚠️ ตรวจสอบ: การ Import นี้อาจทำให้เกิด Build Error (ใช้ Default Import จะชัวร์กว่า)
 import { GoogleGenerativeAI } from "@google/generative-ai"; 
 import { NextResponse } from "next/server";
-// ⚠️ แนะนำให้เปลี่ยน Path Alias: '@/data/mju_comsci_extended_knowledge'
 import { mockRetrieval } from "../../../../data/mju_knowledge"; 
 
 // Initialize Gemini Client
