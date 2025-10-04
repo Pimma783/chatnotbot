@@ -26,23 +26,32 @@ export const extendedKnowledgeBase: KnowledgeChunk[] = [
     { content: "หลักสูตรที่เปิดสอนคือ วิทยาศาสตรบัณฑิต สาขาวิชาวิทยาการคอมพิวเตอร์ (วท.บ. วท.ค.).", source: "หลักสูตร CS 2567", uri: "/docs/curriculum-2567.pdf", category: 'CS_FOCUS' },
     { content: "หลักสูตร CS เน้นการพัฒนาซอฟต์แวร์ประยุกต์, ระบบฐานข้อมูล, และความรู้ด้านปัญญาประดิษฐ์ (AI) และ Machine Learning.", source: "หลักสูตร CS 2567", uri: "/docs/curriculum-2567.pdf", category: 'CS_FOCUS' },
     { content: "กิจกรรมเด่นของภาควิชาคือ 'MJU Coding War' และ 'IT Camp' สำหรับนักเรียนมัธยม.", source: "กิจกรรมภาควิชา", uri: "#activities", category: 'CS_FOCUS' },
-    // ... (ข้อมูลอื่นๆ)
+
 
     // === 3. ข้อมูลที่ควรถูกปฏิเสธ (OUT_OF_SCOPE) ===
     { content: "อัตราดอกเบี้ยนโยบายปัจจุบันของธนาคารแห่งประเทศไทยอยู่ที่ 2.50%.", source: "ข้อมูลการเงิน", uri: "#out-of-scope", category: 'OUT_OF_SCOPE' },
     { content: "ข่าวสารการเมืองในปัจจุบัน.", source: "ข่าวทั่วไป", uri: "#out-of-scope-news", category: 'OUT_OF_SCOPE' },
 
-    // === 4.ไม่มีพื้นฐานมาก่อนเลย จะเรียนได้มั้ย? (CS_FOCUS) ===
+    // === 4. ไม่มีพื้นฐานมาก่อนเลย จะเรียนได้มั้ย? (CS_FOCUS) ===
     {content: "ไม่ต้องกังวลเลยครับหากไม่มีพื้นฐานมาก่อน เพราะภาควิชานี้มีการสอนตั้งแต่ระดับพื้นฐาน เช่น การเขียนโปรแกรมเบื้องต้น และคณิตศาสตร์สำหรับคอมพิวเตอร์.", source: กิจกรรมภาควิชา, uri: /docs/curriculum-2567.pdf, category: 'CS_FOCUS' },
     {content: "หากไม่มีพื้นฐานมาก่อนเลย ทางสาขาก็ยังมีกิจกรรมการปรับพื้นฐานภาควิชานี้อยู่อีกด้วย.", source: กิจกรรมภาควิชา, uri: "#activities", category: 'CS_FOCUS' },
 
-    // === 5. การรับสมัครและค่าธรรมเนียม ===
+    // === 5. การรับสมัครและค่าธรรมเนียม (CS_FOCUS) ===
     {content: "เกณฑ์การรับสมัครหลักใช้คะแนน A-Level ในวิชา คณิตศาสตร์1, ฟิสิกส์, และภาษาอังกฤษ ผ่านระบบ TCAS.",source: ลงทะเบียน, uri:"#admission", category: 'CS_FOCUS' }
     {content: "รอบโควต้า (TCAS 2) มักจะเปิดรับช่วงเดือนกุมภาพันธ์ โดยใช้ GPAX และ Portfolio ประกอบ.",source: ลงทะเบียน, uri:"#admission", category: 'CS_FOCUS' }
     {content: "ค่าธรรมเนียมการศึกษาโดยประมาณสำหรับหลักสูตร CS คือ 18,500 บาทต่อภาคเรียน (Mockup Data).",source: ลงทะเบียน, uri:"#tuition", category: 'CS_FOCUS' }
     {content: "มหาวิทยาลัยมีทุนการศึกษาสำหรับนักศึกษาที่มีผลการเรียนดีเด่น หรือขาดแคลนทุนทรัพย์ (สอบถามที่กองพัฒนานักศึกษา).",source: ลงทะเบียน, uri:"#scholarship", category: 'CS_FOCUS' }
 
+    // === 6. โอกาสในการทำงาน (CS_FOCUS) ===
+    {content: "ศิษย์เก่าส่วนใหญ่ทำงานเป็น Software Developer, Data Analyst, และ System Administrator ในบริษัท Tech.",source: "โอกาสทำงาน", uri:"#career", category: 'CS_FOCUS' }
+    {content: "เนื่องจากแม่โจ้เน้นเกษตร นักศึกษาสาขา CS มีความโดดเด่นในการพัฒนา Agri-Tech และ Smart Farm Solutions.",source: "โอกาสทำงาน", uri:"#career", category: 'CS_FOCUS' }
+    {content: "มีการจัดงาน Job Fair และ Career Talk ประจำปี เพื่อให้นักศึกษาพบปะบริษัทชั้นนำ.",source: "โอกาสทำงาน", uri:"#career", category: 'CS_FOCUS' }
 
+    // === 7. อาจารย์ในสาขามีใครบ้าง? (CS_FOCUS) ===
+    {content: "อาจารย์ประจำภาควิชาวิทยาการคอมพิวเตอร์ ได้แก่ อ. อรรถวิท ชังคมานนท์ (หัวหน้าภาค)",source
+    {content: "ผศ.ดร. สมนึก สินธุปวน",source
+    {content: "อ.ดร. พยุงศักดิ์ เกษมสำราญ.",source
+    {content: "อาจารย์ทุกท่านมีประสบการณ์ทั้งในด้านการสอนและการวิจัยในสาขาต่างๆ ของวิทยาการคอมพิวเตอร์.",source
 ];
 
 /**
