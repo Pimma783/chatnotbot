@@ -1,24 +1,44 @@
 'use client';
 
-import Header from '../components/HeaderUi/page';
-import MessageList from '../components/MessageList/page';
-import ChatInput from '../components/ChatInputUi/page';
-import { useChatStore } from '../store/chatbotstore';
+import Link from 'next/link';
+import HeaderUi from '../components/home/HeaderUi';
+import FeaturesUi from '../components/home/FeaturesUi';
+import FooterUi from '../components/home/FooterUi';
 
-export default function ChatPage() {
-  // ดึง State และฟังก์ชันมาจาก Store ที่เราสร้างไว้
-  const { messages, isLoading, sendMessage } = useChatStore();
-
+export default function HomePage() {
   return (
-    <div className="flex flex-col h-screen bg-gray-50">
-      {/* 1. Component ส่วนหัว */}
-      <Header />
+    <main className="flex flex-col min-h-screen bg-gradient-to-b from-emerald-50 to-white text-gray-800">
+      <HeaderUi />
 
-      {/* 2. Component ส่วนแสดงข้อความ */}
-      <MessageList messages={messages} isLoading={isLoading} />
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center flex-1 text-center px-6 py-20">
+        <h1 className="text-5xl font-extrabold mb-6 text-emerald-600 drop-shadow-sm">
+          ยินดีต้อนรับสู่ ChatBot Web 🤖
+        </h1>
+        <p className="text-lg text-gray-600 max-w-2xl mb-8 leading-relaxed">
+          คุยกับบอทสุดฉลาดในสไตล์ของคุณ
+          สนุก เป็นกันเอง และพร้อมเรียนรู้จากทุกคำถาม 💬
+        </p>
 
-      {/* 3. Component ส่วน Input */}
-      <ChatInput onSendMessage={sendMessage} isLoading={isLoading} />
-    </div>
+        <div className="flex gap-4 flex-wrap justify-center">
+          <Link
+            href="/chat"
+            className="px-6 py-3 bg-emerald-500 text-white rounded-xl shadow-md hover:bg-emerald-600 hover:shadow-lg transition-transform transform hover:-translate-y-1"
+          >
+            เริ่มแชทบอท 💚
+          </Link>
+
+          <Link
+            href="/login"
+            className="px-6 py-3 bg-white border border-emerald-400 text-emerald-600 rounded-xl shadow hover:bg-emerald-50 transition-transform transform hover:-translate-y-1"
+          >
+            เข้าสู่ระบบ
+          </Link>
+        </div>
+      </section>
+
+      <FeaturesUi />
+      <FooterUi />
+    </main>
   );
 }
