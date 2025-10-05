@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { NextResponse } from "next/server";
 // เปลี่ยนชื่อไฟล์ import ให้ตรงกับชื่อใหม่ (ถ้าจำเป็น)
-import { mockRetrieval } from "../../../../data/mju_knowledge";
+import { mockRetrieval } from "../../../../data/mjuknowledge";
 
 // Initialize Gemini Client (ตรวจสอบให้แน่ใจว่า GEMINI_API_KEY ถูกตั้งค่าใน .env)
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
