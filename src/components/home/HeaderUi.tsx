@@ -1,21 +1,36 @@
-'use client';
-
-import Link from 'next/link';
-import { MessageCircleHeart } from 'lucide-react';
+"use client";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function HeaderUi() {
     return (
-        <header className="w-full py-4 px-8 bg-white/90 backdrop-blur-sm shadow-sm flex justify-between items-center sticky top-0 z-50">
-            <div className="flex items-center gap-2 text-emerald-600 font-extrabold text-2xl">
-                <MessageCircleHeart className="w-6 h-6" />
-                ChatBot Web
-            </div>
+        <motion.header
+            initial={{ y: -40, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="w-full fixed top-0 left-0 z-50 backdrop-blur-lg bg-[#0d0d0d]/80 border-b border-red-600/30"
+        >
+            <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+                {/* โลโก้ */}
+                <Link href="/" className="text-xl font-bold text-red-500">
+                    ChatBot<span className="text-white">Web</span>
+                </Link>
 
-            <nav className="flex gap-6 text-gray-600 font-medium">
-                <Link href="/" className="hover:text-emerald-600 transition">หน้าแรก</Link>
-                <Link href="/chat" className="hover:text-emerald-600 transition">เริ่มแชท</Link>
-                <Link href="/login" className="hover:text-emerald-600 transition">เข้าสู่ระบบ</Link>
-            </nav>
-        </header>
+                {/* เมนู */}
+                <nav className="hidden md:flex items-center gap-6 text-gray-300">
+                    <Link href="/" className="hover:text-red-500 transition">Home</Link>
+                    <Link href="/contact" className="hover:text-red-500 transition">Contact</Link>
+                    <Link href="/login" className="hover:text-red-500 transition">Login</Link>
+                </nav>
+
+                {/* ปุ่ม */}
+                <Link
+                    href="/contact"
+                    className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition text-sm font-semibold"
+                >
+                    Get Started
+                </Link>
+            </div>
+        </motion.header>
     );
 }

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "../components/home/HeaderUi";
+import HeaderUi from "@/components/home/HeaderUi";
+import FooterUi from "@/components/home/FooterUi";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,15 +21,24 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="th">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-gradient-to-b from-[#0a0a0a] via-[#1a0000] to-[#000000] text-white`}
       >
-        <main className="min-h-screen">{children}</main>
+        {/* ✅ Header อยู่บน */}
+        <HeaderUi />
+
+        {/* ✅ เนื้อหาหลัก: ทำให้ footer อยู่ล่างเสมอ */}
+        <main className="flex-1 flex flex-col justify-center w-full">
+          {children}
+        </main>
+
+        {/* ✅ Footer อยู่ล่าง */}
+        <FooterUi />
       </body>
     </html>
   );

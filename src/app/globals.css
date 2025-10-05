@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
+/* 🎨 Red-Black Futuristic Theme */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #141212;
+  --foreground: #ffffff;
+  --accent: #ff0000;
 }
 
 @theme inline {
@@ -14,13 +16,32 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0d0d0d;
+    --foreground: #ffffff;
+    --accent: #ff2020;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-gradient-to-br from-[#141212] via-[#1b0000] to-[#ff0000]/10 text-white antialiased;
+  font-family: 'Gilroy', 'Kanit', 'Prompt', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  @apply font-extrabold text-white;
+}
+
+a {
+  @apply text-red-500 hover:text-red-400 transition-colors;
+}
+
+button {
+  @apply bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-xl transition-all shadow-md;
+}
+
+.card {
+  @apply bg-[#1b1b1b] rounded-2xl shadow-lg border border-[#2a2a2a]/50;
 }
