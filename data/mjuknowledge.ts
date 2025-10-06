@@ -70,6 +70,7 @@ export const extendedKnowledgeBase: KnowledgeChunk[] = [
     { content: "รายละเอียดทางการเงินของมหาวิทยาลัย เช่น งบประมาณและรายรับรายจ่าย.", source: "ข้อมูลการเงิน", uri: "#out-of-scope-financial", category: 'OUT_OF_SCOPE' },
     { content: "ข้อมูลภายในของมหาวิทยาลัย เช่น นโยบายภายในและการประชุมคณะกรรมการ.", source: "ข้อมูลภายใน", uri: "#out-of-scope-internal", category: 'OUT_OF_SCOPE' },
     { content: "ข่าวสารทั่วไปที่ไม่เกี่ยวข้องกับมหาวิทยาลัย เช่น ข่าวบันเทิง กีฬา หรือเหตุการณ์ปัจจุบัน.", source: "ข่าวทั่วไป", uri: "#out-of-scope-news", category: 'OUT_OF_SCOPE' },
+    { content: "ข้อมูลทางการแพทย์และสุขภาพ เช่น การรักษาโรค หรือคำแนะนำทางสุขภาพ.", source: "ข้อมูลสุขภาพ", uri: "#out-of-scope-health", category: 'OUT_OF_SCOPE' },
     
 ];
 
