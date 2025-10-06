@@ -48,10 +48,29 @@ export const extendedKnowledgeBase: KnowledgeChunk[] = [
     {content: "มีการจัดงาน Job Fair และ Career Talk ประจำปี เพื่อให้นักศึกษาพบปะบริษัทชั้นนำ.",source: "โอกาสทำงาน", uri:"#career", category: 'CS_FOCUS' },
 
     // === 7. อาจารย์ในสาขามีใครบ้าง? (CS_FOCUS) ===
-    {content: "อาจารย์ประจำภาควิชาวิทยาการคอมพิวเตอร์ ได้แก่ อ. อรรถวิท ชังคมานนท์ (หัวหน้าภาค)",source:"อาจารย์วิทคอม", uri:"#career", category: 'CS_FOCUS' },
-    {content: "ผศ.ดร. สมนึก สินธุปวน",source:"อาจารย์วิทคอม", uri:"#career", category: 'CS_FOCUS' },
-    {content: "อ.ดร. พยุงศักดิ์ เกษมสำราญ.",source:"อาจารย์วิทคอม", uri:"#career", category: 'CS_FOCUS' },
-    {content: "อาจารย์ทุกท่านมีประสบการณ์ทั้งในด้านการสอนและการวิจัยในสาขาต่างๆ ของวิทยาการคอมพิวเตอร์.",source:"อาจารย์วิทคอม", uri:"#career", category: 'CS_FOCUS' },
+    {content: "อาจารย์ประจำภาควิชาวิทยาการคอมพิวเตอร์ ได้แก่ อ. อรรถวิท ชังคมานนท์ (หัวหน้าภาค)",source:"อาจารย์วิทย์คอม", uri:"#career", category: 'CS_FOCUS' },
+    {content: "ผศ.ดร. สมนึก สินธุปวน",source:"อาจารย์วิทย์คอม", uri:"#career", category: 'CS_FOCUS' },
+    {content: "อ.ดร. พยุงศักดิ์ เกษมสำราญ.",source:"อาจารย์วิทย์คอม", uri:"#career", category: 'CS_FOCUS' },
+    {content: "อาจารย์ทุกท่านมีประสบการณ์ทั้งในด้านการสอนและการวิจัยในสาขาต่างๆ ของวิทยาการคอมพิวเตอร์.",source:"อาจารย์วิทย์คอม", uri:"#career", category: 'CS_FOCUS' },
+
+    // === 8. การใช้สถานที่สำหรับเรียน (CS_FOCUS) ===
+    {content: "มีห้องปฏิบัติการคอมพิวเตอร์ที่ทันสมัย พร้อมซอฟต์แวร์และฮาร์ดแวร์ล่าสุดสำหรับการเรียนการสอน.", source: "CS Facilities", uri: "#cs-lab", category: 'CS_FOCUS' },
+    {content: "มีบริการอินเทอร์เน็ตความเร็วสูง และ Wi-Fi ครอบคลุมทั่วทั้งอาคาร.", source: "CS Facilities", uri: "#cs-lab", category: 'CS_FOCUS' },
+    {content: "มีพื้นที่สำหรับการทำงานกลุ่ม และห้องสมุดที่มีหนังสือและวารสารทางวิทยาการคอมพิวเตอร์มากมาย.", source: "CS Facilities", uri: "#cs-lab", category: 'CS_FOCUS' },
+
+    // === 9. ข้อมูลทั่วไปอื่นๆ (GENERAL_INFO) ===
+    { content: "มหาวิทยาลัยแม่โจ้ก่อตั้งขึ้นในปี พ.ศ. 2467 โดยมีจุดมุ่งหมายเพื่อส่งเสริมการเกษตรและเทคโนโลยีในภาคเหนือของประเทศไทย.", source: "MJU History", uri: "#mju-history", category: 'GENERAL_INFO' },
+    { content: "มหาวิทยาลัยมีวิทยาเขตหลักที่เชียงใหม่ และมีวิทยาเขตย่อยที่ลำปาง, แพร่, และสกลนคร.", source: "MJU Campuses", uri: "#mju-campuses", category: 'GENERAL_INFO' },
+    { content: "คณะวิทยาศาสตร์มีภาควิชาต่างๆ เช่น ภาควิชาชีววิทยา, ภาควิชาเคมี, ภาควิชาฟิสิกส์, และภาควิชาวิทยาการคอมพิวเตอร์.", source: "Science Faculty", uri: "#science-faculty", category: 'GENERAL_INFO' },
+    { content: "มหาวิทยาลัยมีความร่วมมือกับสถาบันการศึกษาชั้นนำทั้งในและต่างประเทศ เพื่อส่งเสริมการวิจัยและการแลกเปลี่ยนนักศึกษา.", source: "MJU Collaborations", uri: "#mju-collaborations", category: 'GENERAL_INFO' },
+    { content: "มหาวิทยาลัยมีสิ่งอำนวยความสะดวกต่างๆ เช่น ห้องสมุด, ศูนย์กีฬา, และที่พักนักศึกษา.", source: "MJU Facilities", uri: "#mju-facilities", category: 'GENERAL_INFO' },
+
+    // === 10. ข้อมูลที่ควรถูกปฏิเสธเพิ่มเติม (OUT_OF_SCOPE) ===
+    { content: "ข้อมูลส่วนบุคคลของนักศึกษาและบุคลากร.", source: "ข้อมูลส่วนบุคคล", uri: "#out-of-scope-personal", category: 'OUT_OF_SCOPE' },
+    { content: "รายละเอียดทางการเงินของมหาวิทยาลัย เช่น งบประมาณและรายรับรายจ่าย.", source: "ข้อมูลการเงิน", uri: "#out-of-scope-financial", category: 'OUT_OF_SCOPE' },
+    { content: "ข้อมูลภายในของมหาวิทยาลัย เช่น นโยบายภายในและการประชุมคณะกรรมการ.", source: "ข้อมูลภายใน", uri: "#out-of-scope-internal", category: 'OUT_OF_SCOPE' },
+    { content: "ข่าวสารทั่วไปที่ไม่เกี่ยวข้องกับมหาวิทยาลัย เช่น ข่าวบันเทิง กีฬา หรือเหตุการณ์ปัจจุบัน.", source: "ข่าวทั่วไป", uri: "#out-of-scope-news", category: 'OUT_OF_SCOPE' },
+    
 ];
 
 /**
@@ -63,7 +82,7 @@ export function mockRetrieval(query: string): { context: string, sources: Array<
     const queryLower = query.toLowerCase();
     
     // Keywords สำหรับการค้นหา CS โดยเฉพาะ
-    const csKeywords = ["หลักสูตร", "ค่าเทอม", "สมัคร", "ติดต่อ", "คณะ", "วิชา", "จบ", "ทำงาน", "e-sports", "คอมพิวเตอร์", "จุฬาภรณ์", "lab"];
+    const csKeywords = ["หลักสูตร", "ค่าเทอม", "สมัคร", "ติดต่อ", "คณะ", "วิชา", "จบ", "ทำงาน", "e-sports", "คอมพิวเตอร์", "จุฬาภรณ์", "lab", "อาจารย์", "พื้นฐาน" ];
     const userKeywords = queryLower.split(' ').filter(k => k.length > 2);
     const searchTerms = Array.from(new Set([...csKeywords, ...userKeywords]));
 
