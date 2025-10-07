@@ -33,21 +33,22 @@ export const extendedKnowledgeBase: KnowledgeChunk[] = [
     { content: "ข่าวสารการเมืองในปัจจุบัน.", source: "ข่าวทั่วไป", uri: "#out-of-scope-news", category: 'OUT_OF_SCOPE' },
 
     // === 4. ไม่มีพื้นฐานมาก่อนเลย จะเรียนได้มั้ย? (CS_FOCUS) ===
-    {content: "ไม่ต้องกังวลเลยครับหากไม่มีพื้นฐานมาก่อน เพราะภาควิชานี้มีการสอนตั้งแต่ระดับพื้นฐาน เช่น การเขียนโปรแกรมเบื้องต้น และคณิตศาสตร์สำหรับคอมพิวเตอร์.", source: กิจกรรมภาควิชา, uri: /docs/curriculum-2567.pdf, category: 'CS_FOCUS' },
-    {content: "หากไม่มีพื้นฐานมาก่อนเลย ทางสาขาก็ยังมีกิจกรรมการปรับพื้นฐานภาควิชานี้อยู่อีกด้วย.", source: กิจกรรมภาควิชา, uri: "#activities", category: 'CS_FOCUS' },
+    {content: "ไม่ต้องกังวลเลยครับหากไม่มีพื้นฐานมาก่อน เพราะภาควิชานี้มีการสอนตั้งแต่ระดับพื้นฐาน เช่น การเขียนโปรแกรมเบื้องต้น และคณิตศาสตร์สำหรับคอมพิวเตอร์.", source: "กิจกรรมภาควิชา", uri: "/docs/curriculum-2567.pdf", category: 'CS_FOCUS' },
+    {content: "หากไม่มีพื้นฐานมาก่อนเลย ทางสาขาก็ยังมีกิจกรรมการปรับพื้นฐานภาควิชานี้อยู่อีกด้วย.", source: "กิจกรรมภาควิชา", uri: "#activities", category: 'CS_FOCUS' },
 
     // === 5. การรับสมัครและค่าธรรมเนียม (CS_FOCUS) ===
-    {content: "เกณฑ์การรับสมัครหลักใช้คะแนน A-Level ในวิชา คณิตศาสตร์1, ฟิสิกส์, และภาษาอังกฤษ ผ่านระบบ TCAS.",source: ลงทะเบียน, uri:"#admission", category: 'CS_FOCUS' }
-    {content: "รอบโควต้า (TCAS 2) มักจะเปิดรับช่วงเดือนกุมภาพันธ์ โดยใช้ GPAX และ Portfolio ประกอบ.",source: ลงทะเบียน, uri:"#admission", category: 'CS_FOCUS' }
-    {content: "ค่าธรรมเนียมการศึกษาโดยประมาณสำหรับหลักสูตร CS คือ 18,500 บาทต่อภาคเรียน (Mockup Data).",source: ลงทะเบียน, uri:"#tuition", category: 'CS_FOCUS' }
-    {content: "มหาวิทยาลัยมีทุนการศึกษาสำหรับนักศึกษาที่มีผลการเรียนดีเด่น หรือขาดแคลนทุนทรัพย์ (สอบถามที่กองพัฒนานักศึกษา).",source: ลงทะเบียน, uri:"#scholarship", category: 'CS_FOCUS' }
+    {content: "เกณฑ์การรับสมัครหลักใช้คะแนน A-Level ในวิชา คณิตศาสตร์1, ฟิสิกส์, และภาษาอังกฤษ ผ่านระบบ TCAS.",source: "ลงทะเบียน", uri:"#admission", category: 'CS_FOCUS' },
+    {content: "รอบโควต้า (TCAS 2) มักจะเปิดรับช่วงเดือนกุมภาพันธ์ โดยใช้ GPAX และ Portfolio ประกอบ.",source: "ลงทะเบียน", uri:"#admission", category: 'CS_FOCUS' },
+    {content: "ค่าธรรมเนียมการศึกษาโดยประมาณสำหรับหลักสูตร CS คือ 18,500 บาทต่อภาคเรียน (Mockup Data).",source: "ลงทะเบียน", uri:"#tuition", category: 'CS_FOCUS' },
+    {content: "มหาวิทยาลัยมีทุนการศึกษาสำหรับนักศึกษาที่มีผลการเรียนดีเด่น หรือขาดแคลนทุนทรัพย์ (สอบถามที่กองพัฒนานักศึกษา).",source: "ลงทะเบียน", uri:"#scholarship", category: 'CS_FOCUS' },
 
     // === 6. โอกาสในการทำงาน (CS_FOCUS) ===
-    {content: "ศิษย์เก่าส่วนใหญ่ทำงานเป็น Software Developer, Data Analyst, และ System Administrator ในบริษัท Tech.",source: "โอกาสทำงาน", uri:"#career", category: 'CS_FOCUS' }
-    {content: "เนื่องจากแม่โจ้เน้นเกษตร นักศึกษาสาขา CS มีความโดดเด่นในการพัฒนา Agri-Tech และ Smart Farm Solutions.",source: "โอกาสทำงาน", uri:"#career", category: 'CS_FOCUS' }
-    {content: "มีการจัดงาน Job Fair และ Career Talk ประจำปี เพื่อให้นักศึกษาพบปะบริษัทชั้นนำ.",source: "โอกาสทำงาน", uri:"#career", category: 'CS_FOCUS' }
+    {content: "ศิษย์เก่าส่วนใหญ่ทำงานเป็น Software Developer, Data Analyst, และ System Administrator ในบริษัท Tech.",source: "โอกาสทำงาน", uri:"#career", category: 'CS_FOCUS' },
+    {content: "เนื่องจากแม่โจ้เน้นเกษตร นักศึกษาสาขา CS มีความโดดเด่นในการพัฒนา Agri-Tech และ Smart Farm Solutions.",source: "โอกาสทำงาน", uri:"#career", category: 'CS_FOCUS' },
+    {content: "มีการจัดงาน Job Fair และ Career Talk ประจำปี เพื่อให้นักศึกษาพบปะบริษัทชั้นนำ.",source: "โอกาสทำงาน", uri:"#career", category: 'CS_FOCUS' },
 
     // === 7. อาจารย์ในสาขามีใครบ้าง? (CS_FOCUS) ===
+<<<<<<< HEAD
     {content: "อาจารย์ประจำภาควิชาวิทยาการคอมพิวเตอร์ ได้แก่ อ. อรรถวิท ชังคมานนท์ (หัวหน้าภาค)",source: "อ. อรรถวิท ชังคมานนท์", uri:"#faculty", category: 'CS_FOCUS' }
     {content: "ผศ.ดร. สมนึก สินธุปวน",source: "ผศ.ดร. สมนึก สินธุปวน", uri:"#faculty", category: 'CS_FOCUS' }
     {content: "อ.ดร. พยุงศักดิ์ เกษมสำราญ.",source: "อ.ดร. พยุงศักดิ์ เกษมสำราญ", uri:"#faculty", category: 'CS_FOCUS' }
@@ -76,6 +77,33 @@ export const extendedKnowledgeBase: KnowledgeChunk[] = [
     {content: "AI ตัวนี้ถูกพัฒนาขึ้นเพื่อช่วยตอบคำถามและให้ข้อมูลเกี่ยวกับภาควิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้ โดยใช้เทคนิค RAG (Retrieval-Augmented Generation) เพื่อดึงข้อมูลที่เกี่ยวข้องจากฐานความรู้ (Knowledge Base) และสร้างคำตอบที่เหมาะสมสำหรับผู้ใช้.",source: "AI Info", uri:"#about-ai", category: 'GENERAL_INFO' }
 
     ];
+=======
+    {content: "อาจารย์ประจำภาควิชาวิทยาการคอมพิวเตอร์ ได้แก่ อ. อรรถวิท ชังคมานนท์ (หัวหน้าภาค)",source:"อาจารย์วิทย์คอม", uri:"#career", category: 'CS_FOCUS' },
+    {content: "ผศ.ดร. สมนึก สินธุปวน",source:"อาจารย์วิทย์คอม", uri:"#career", category: 'CS_FOCUS' },
+    {content: "อ.ดร. พยุงศักดิ์ เกษมสำราญ.",source:"อาจารย์วิทย์คอม", uri:"#career", category: 'CS_FOCUS' },
+    {content: "อาจารย์ทุกท่านมีประสบการณ์ทั้งในด้านการสอนและการวิจัยในสาขาต่างๆ ของวิทยาการคอมพิวเตอร์.",source:"อาจารย์วิทย์คอม", uri:"#career", category: 'CS_FOCUS' },
+
+    // === 8. การใช้สถานที่สำหรับเรียน (CS_FOCUS) ===
+    {content: "มีห้องปฏิบัติการคอมพิวเตอร์ที่ทันสมัย พร้อมซอฟต์แวร์และฮาร์ดแวร์ล่าสุดสำหรับการเรียนการสอน.", source: "CS Facilities", uri: "#cs-lab", category: 'CS_FOCUS' },
+    {content: "มีบริการอินเทอร์เน็ตความเร็วสูง และ Wi-Fi ครอบคลุมทั่วทั้งอาคาร.", source: "CS Facilities", uri: "#cs-lab", category: 'CS_FOCUS' },
+    {content: "มีพื้นที่สำหรับการทำงานกลุ่ม และห้องสมุดที่มีหนังสือและวารสารทางวิทยาการคอมพิวเตอร์มากมาย.", source: "CS Facilities", uri: "#cs-lab", category: 'CS_FOCUS' },
+
+    // === 9. ข้อมูลทั่วไปอื่นๆ (GENERAL_INFO) ===
+    { content: "มหาวิทยาลัยแม่โจ้ก่อตั้งขึ้นในปี พ.ศ. 2467 โดยมีจุดมุ่งหมายเพื่อส่งเสริมการเกษตรและเทคโนโลยีในภาคเหนือของประเทศไทย.", source: "MJU History", uri: "#mju-history", category: 'GENERAL_INFO' },
+    { content: "มหาวิทยาลัยมีวิทยาเขตหลักที่เชียงใหม่ และมีวิทยาเขตย่อยที่ลำปาง, แพร่, และสกลนคร.", source: "MJU Campuses", uri: "#mju-campuses", category: 'GENERAL_INFO' },
+    { content: "คณะวิทยาศาสตร์มีภาควิชาต่างๆ เช่น ภาควิชาชีววิทยา, ภาควิชาเคมี, ภาควิชาฟิสิกส์, และภาควิชาวิทยาการคอมพิวเตอร์.", source: "Science Faculty", uri: "#science-faculty", category: 'GENERAL_INFO' },
+    { content: "มหาวิทยาลัยมีความร่วมมือกับสถาบันการศึกษาชั้นนำทั้งในและต่างประเทศ เพื่อส่งเสริมการวิจัยและการแลกเปลี่ยนนักศึกษา.", source: "MJU Collaborations", uri: "#mju-collaborations", category: 'GENERAL_INFO' },
+    { content: "มหาวิทยาลัยมีสิ่งอำนวยความสะดวกต่างๆ เช่น ห้องสมุด, ศูนย์กีฬา, และที่พักนักศึกษา.", source: "MJU Facilities", uri: "#mju-facilities", category: 'GENERAL_INFO' },
+
+    // === 10. ข้อมูลที่ควรถูกปฏิเสธเพิ่มเติม (OUT_OF_SCOPE) ===
+    { content: "ข้อมูลส่วนบุคคลของนักศึกษาและบุคลากร.", source: "ข้อมูลส่วนบุคคล", uri: "#out-of-scope-personal", category: 'OUT_OF_SCOPE' },
+    { content: "รายละเอียดทางการเงินของมหาวิทยาลัย เช่น งบประมาณและรายรับรายจ่าย.", source: "ข้อมูลการเงิน", uri: "#out-of-scope-financial", category: 'OUT_OF_SCOPE' },
+    { content: "ข้อมูลภายในของมหาวิทยาลัย เช่น นโยบายภายในและการประชุมคณะกรรมการ.", source: "ข้อมูลภายใน", uri: "#out-of-scope-internal", category: 'OUT_OF_SCOPE' },
+    { content: "ข่าวสารทั่วไปที่ไม่เกี่ยวข้องกับมหาวิทยาลัย เช่น ข่าวบันเทิง กีฬา หรือเหตุการณ์ปัจจุบัน.", source: "ข่าวทั่วไป", uri: "#out-of-scope-news", category: 'OUT_OF_SCOPE' },
+    { content: "ข้อมูลทางการแพทย์และสุขภาพ เช่น การรักษาโรค หรือคำแนะนำทางสุขภาพ.", source: "ข้อมูลสุขภาพ", uri: "#out-of-scope-health", category: 'OUT_OF_SCOPE' },
+    
+];
+>>>>>>> d9d49f86f809b7d982938f230f46609c42787b5b
 
 /**
  * ฟังก์ชัน Retrieval ที่ถูกปรับปรุงให้ดึงทั้ง Content และ Source ออกมา
@@ -86,7 +114,7 @@ export function mockRetrieval(query: string): { context: string, sources: Array<
     const queryLower = query.toLowerCase();
     
     // Keywords สำหรับการค้นหา CS โดยเฉพาะ
-    const csKeywords = ["หลักสูตร", "ค่าเทอม", "สมัคร", "ติดต่อ", "คณะ", "วิชา", "จบ", "ทำงาน", "e-sports", "คอมพิวเตอร์", "จุฬาภรณ์", "lab"];
+    const csKeywords = ["หลักสูตร", "ค่าเทอม", "สมัคร", "ติดต่อ", "คณะ", "วิชา", "จบ", "ทำงาน", "e-sports", "คอมพิวเตอร์", "จุฬาภรณ์", "lab", "อาจารย์", "พื้นฐาน" ];
     const userKeywords = queryLower.split(' ').filter(k => k.length > 2);
     const searchTerms = Array.from(new Set([...csKeywords, ...userKeywords]));
 
