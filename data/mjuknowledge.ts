@@ -74,7 +74,7 @@ export const extendedKnowledgeBase: KnowledgeChunk[] = [
     {content: "โรงอาหารหลักอยู่ใกล้กับอาคารจุฬาภรณ์ เดินทางไปได้ภายใน 5 นาที.",source: "MJU General Info", uri:"#canteen", category: 'GENERAL_INFO' },
 
     // === 12. เอไอตัวนี้มีไว้เพื่ออะไร ===
-    {content: "AI ตัวนี้ถูกพัฒนาขึ้นเพื่อช่วยตอบคำถามและให้ข้อมูลเกี่ยวกับภาควิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้ โดยใช้เทคนิค RAG (Retrieval-Augmented Generation) เพื่อดึงข้อมูลที่เกี่ยวข้องจากฐานความรู้ (Knowledge Base) และสร้างคำตอบที่เหมาะสมสำหรับผู้ใช้.",source: "AI Info", uri:"#about-ai", category: 'GENERAL_INFO' }
+    {content: "AI ตัวนี้ถูกพัฒนาขึ้นเพื่อช่วยตอบคำถามและให้ข้อมูลเกี่ยวกับภาควิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้ โดยใช้เทคนิค RAG (Retrieval-Augmented Generation) เพื่อดึงข้อมูลที่เกี่ยวข้องจากฐานความรู้ (Knowledge Base) และสร้างคำตอบที่เหมาะสมสำหรับผู้ใช้.",source: "AI Info", uri:"#about-ai", category: 'GENERAL_INFO' },
 
     ];
 =======
