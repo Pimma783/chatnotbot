@@ -49,10 +49,10 @@ export const extendedKnowledgeBase: KnowledgeChunk[] = [
 
     // === 7. อาจารย์ในสาขามีใครบ้าง? (CS_FOCUS) ===
 <<<<<<< HEAD
-    {content: "อาจารย์ประจำภาควิชาวิทยาการคอมพิวเตอร์ ได้แก่ อ. อรรถวิท ชังคมานนท์ (หัวหน้าภาค)",source: "อ. อรรถวิท ชังคมานนท์", uri:"#faculty", category: 'CS_FOCUS' }
-    {content: "ผศ.ดร. สมนึก สินธุปวน",source: "ผศ.ดร. สมนึก สินธุปวน", uri:"#faculty", category: 'CS_FOCUS' }
-    {content: "อ.ดร. พยุงศักดิ์ เกษมสำราญ.",source: "อ.ดร. พยุงศักดิ์ เกษมสำราญ", uri:"#faculty", category: 'CS_FOCUS' }
-    {content: "อาจารย์ทุกท่านมีประสบการณ์ทั้งในด้านการสอนและการวิจัยในสาขาต่างๆ ของวิทยาการคอมพิวเตอร์.",source: "อาจารย์ภาควิชา", uri:"#faculty", category: 'CS_FOCUS' }
+    {content: "อาจารย์ประจำภาควิชาวิทยาการคอมพิวเตอร์ ได้แก่ อ. อรรถวิท ชังคมานนท์ (หัวหน้าภาค)",source: "อ. อรรถวิท ชังคมานนท์", uri:"#faculty", category: 'CS_FOCUS' },
+    {content: "ผศ.ดร. สมนึก สินธุปวน",source: "ผศ.ดร. สมนึก สินธุปวน", uri:"#faculty", category: 'CS_FOCUS' },
+    {content: "อ.ดร. พยุงศักดิ์ เกษมสำราญ.",source: "อ.ดร. พยุงศักดิ์ เกษมสำราญ", uri:"#faculty", category: 'CS_FOCUS' },
+    {content: "อาจารย์ทุกท่านมีประสบการณ์ทั้งในด้านการสอนและการวิจัยในสาขาต่างๆ ของวิทยาการคอมพิวเตอร์.",source: "อาจารย์ภาควิชา", uri:"#faculty", category: 'CS_FOCUS' },
 
     // === 8. มีหอพักสำหรับนักศึกษาหรือไม่? (GENERAL_INFO) ===
     {content: "มหาวิทยาลัยแม่โจ้มีหอพักสำหรับนักศึกษาชายและหญิงแยกกัน โดยมีสิ่งอำนวยความสะดวกครบครัน เช่น อินเทอร์เน็ต, ห้องน้ำในตัว, และระบบรักษาความปลอดภัย.",source: "MJU General Info", uri:"#dormitory", category: 'GENERAL_INFO' },
@@ -60,18 +60,18 @@ export const extendedKnowledgeBase: KnowledgeChunk[] = [
 
     // === 9. มีกิจกรรมนักศึกษาหรือชมรมอะไรบ้าง? (GENERAL_INFO) ===
     {content: "มหาวิทยาลัยมีชมรมและกิจกรรมนักศึกษาหลากหลาย เช่น ชมรมดนตรี, ชมรมกีฬา, และชมรมอาสาสมัคร.",source: "MJU General Info", uri:"#student-activities", category: 'GENERAL_INFO' },
-    {content: "ภาควิชาวิทยาการคอมพิวเตอร์มีชมรม CS Club ที่จัดกิจกรรมเชิงเทคนิคและการแข่งขัน Coding เป็นประจำ.",source: "CS Activities", uri:"#cs-club", category: 'CS_FOCUS' }
+    {content: "ภาควิชาวิทยาการคอมพิวเตอร์มีชมรม CS Club ที่จัดกิจกรรมเชิงเทคนิคและการแข่งขัน Coding เป็นประจำ.",source: "CS Activities", uri:"#cs-club", category: 'CS_FOCUS' },
 
     // === 10. มีทุนการศึกษาหรือไม่? (GENERAL_INFO) ===
     {content: "มหาวิทยาลัยแม่โจ้มีทุนการศึกษาหลากหลายประเภท เช่น ทุนเรียนดี, ทุนขาดแคลนทุนทรัพย์, และทุนกิจกรรม.",source: "MJU Scholarship", uri:"#scholarship-info", category: 'GENERAL_INFO' },
-    {content: "นักศึกษาสามารถสมัครขอรับทุนได้ที่กองพัฒนานักศึกษา โดยมีเกณฑ์การพิจารณาตามแต่ละประเภทของทุน.",source: "MJU Scholarship", uri:"#scholarship-info", category: 'GENERAL_INFO' }
+    {content: "นักศึกษาสามารถสมัครขอรับทุนได้ที่กองพัฒนานักศึกษา โดยมีเกณฑ์การพิจารณาตามแต่ละประเภทของทุน.",source: "MJU Scholarship", uri:"#scholarship-info", category: 'GENERAL_INFO' },
 
     // === 11. สิ่งอำนวยความสะดวกและกิจกรรม (CS_FOCUS) ===
     {content: "ห้องปฏิบัติการคอมพิวเตอร์หลัก (Lab) เปิดให้บริการจนถึง 20:00 น. ในช่วงวันทำการเรียน.",source: "CS Facilities", uri:"#cs-lab", category: 'CS_FOCUS' },
     {content: "นักศึกษาสามารถยืมอุปกรณ์ IT เช่น Laptop หรือ Tablet สำหรับการเรียนได้ที่สำนักหอสมุด.",source: "MJU Library", uri:"#it-loan", category: 'GENERAL_INFO' },
     {content: "กิจกรรมเด่นของภาควิชาคือ 'MJU Coding War' และ 'IT Camp' สำหรับนักเรียนมัธยม.",source: "CS Activities", uri:"#activities", category: 'CS_FOCUS' },
-    {content: "มีชมรม e-Sports และชมรมพัฒนาซอฟต์แวร์ (Developer Club) ภายใต้การดูแลของภาควิชา.",source: "CS Activities", uri:"#activities", category: 'CS_FOCUS' }
-    {content: "โรงอาหารหลักอยู่ใกล้กับอาคารจุฬาภรณ์ เดินทางไปได้ภายใน 5 นาที.",source: "MJU General Info", uri:"#canteen", category: 'GENERAL_INFO' }
+    {content: "มีชมรม e-Sports และชมรมพัฒนาซอฟต์แวร์ (Developer Club) ภายใต้การดูแลของภาควิชา.",source: "CS Activities", uri:"#activities", category: 'CS_FOCUS' },
+    {content: "โรงอาหารหลักอยู่ใกล้กับอาคารจุฬาภรณ์ เดินทางไปได้ภายใน 5 นาที.",source: "MJU General Info", uri:"#canteen", category: 'GENERAL_INFO' },
 
     // === 12. เอไอตัวนี้มีไว้เพื่ออะไร ===
     {content: "AI ตัวนี้ถูกพัฒนาขึ้นเพื่อช่วยตอบคำถามและให้ข้อมูลเกี่ยวกับภาควิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้ โดยใช้เทคนิค RAG (Retrieval-Augmented Generation) เพื่อดึงข้อมูลที่เกี่ยวข้องจากฐานความรู้ (Knowledge Base) และสร้างคำตอบที่เหมาะสมสำหรับผู้ใช้.",source: "AI Info", uri:"#about-ai", category: 'GENERAL_INFO' }
