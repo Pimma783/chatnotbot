@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import HeaderUi from "@/components/home/HeaderUi";
 import FooterUi from "@/components/home/FooterUi";
+import { AuthProvider } from "@/context/AuthContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,26 +20,17 @@ export const metadata: Metadata = {
   description: "เว็บแชทบอทด้วย Next.js",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="th">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-gradient-to-b from-[#0a0a0a] via-[#1a0000] to-[#000000] text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-gradient-to-b from-white via-[#f7f9f7] to-[#e9eeea] text-gray-900`}
       >
-        {/* ✅ Header อยู่บน */}
-        <HeaderUi />
-
-        {/* ✅ เนื้อหาหลัก: ทำให้ footer อยู่ล่างเสมอ */}
-        <main className="flex-1 flex flex-col justify-center w-full">
-          {children}
-        </main>
-
-        {/* ✅ Footer อยู่ล่าง */}
-        <FooterUi />
+        <AuthProvider>
+          <HeaderUi />
+          <main className="flex-1 flex flex-col justify-center w-full">{children}</main>
+          <FooterUi />
+        </AuthProvider>
       </body>
     </html>
   );

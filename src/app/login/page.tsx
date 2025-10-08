@@ -1,62 +1,86 @@
 "use client";
-import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
-    const [loading, setLoading] = useState(false);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const router = useRouter();
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        // ตัวอย่างจำลองการเข้าสู่ระบบ
+        if (email && password) {
+            localStorage.setItem("authToken", "dummy_token");
+            router.push("/");
+        }
+    };
 
     return (
-        <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-[#141212] via-[#1a0000] to-[#ff0000]/20 p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 bg-[#1b1b1b]/90 rounded-3xl shadow-2xl overflow-hidden max-w-5xl w-full">
-                {/* LEFT - FORM */}
-                <div className="p-10 flex flex-col justify-center">
-                    <h1 className="text-3xl font-extrabold mb-6 text-white">
-                        Welcome Back
-                    </h1>
-                    <p className="text-gray-400 mb-8">
-                        Sign in to continue to your dashboard
-                    </p>
+        <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-black via-[#002200] to-[#001100] text-white px-6">
+            <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="w-full max-w-md bg-[#011100]/80 border border-green-700/20 backdrop-blur-lg rounded-2xl shadow-xl p-8"
+            >
+                {/* หัวข้อหน้า */}
+                <h1 className="text-3xl font-bold text-center text-white mb-4">
+                    เข้าสู่ระบบ
+                </h1>
+                <p className="text-gray-300 text-center mb-8">
+                    โปรดเข้าสู่ระบบเพื่อใช้งานระบบสนทนาอัจฉริยะของ{" "}
+                    <span className="text-green-400 font-semibold">ChatBot MJU</span>
+                </p>
 
-                    <form className="space-y-5">
+                {/* ฟอร์มล็อกอิน */}
+                <form onSubmit={handleSubmit} className="space-y-5">
+                    <div>
+                        <label className="block text-gray-200 text-sm mb-2">
+                            อีเมล
+                        </label>
                         <input
                             type="email"
-                            placeholder="Email"
-                            className="w-full px-4 py-3 rounded-xl bg-[#0f0f0f] text-white border border-gray-700 focus:border-red-500 focus:outline-none"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="กรอกอีเมลของคุณ"
+                            className="w-full px-4 py-3 rounded-lg bg-black/40 border border-green-700/30 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            required
                         />
+                    </div>
+
+                    <div>
+                        <label className="block text-gray-200 text-sm mb-2">
+                            รหัสผ่าน
+                        </label>
                         <input
                             type="password"
-                            placeholder="Password"
-                            className="w-full px-4 py-3 rounded-xl bg-[#0f0f0f] text-white border border-gray-700 focus:border-red-500 focus:outline-none"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            placeholder="กรอกรหัสผ่าน"
+                            className="w-full px-4 py-3 rounded-lg bg-black/40 border border-green-700/30 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500"
+                            required
                         />
+                    </div>
 
-                        <button
-                            type="submit"
-                            disabled={loading}
-                            className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 rounded-xl transition-all"
-                        >
-                            {loading ? "Signing in..." : "Sign In"}
-                        </button>
-                    </form>
+                    <button
+                        type="submit"
+                        className="w-full py-3 mt-4 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 
+                       rounded-lg font-medium text-white transition-all transform hover:scale-105 shadow-md"
+                    >
+                        เข้าสู่ระบบ
+                    </button>
+                </form>
 
-                    <p className="text-gray-400 text-sm mt-6 text-center">
-                        Don’t have an account?{" "}
-                        <a href="#" className="text-red-500 hover:text-red-400 font-medium">
-                            Sign up
-                        </a>
-                    </p>
+                <div className="text-center mt-6 text-gray-400 text-sm">
+                    ยังไม่มีบัญชี?{" "}
+                    <a href="/register" className="text-green-400 hover:text-green-300">
+                        ลงทะเบียนที่นี่
+                    </a>
                 </div>
-
-                {/* RIGHT - 3D IMAGE */}
-                <div className="hidden md:flex items-center justify-center bg-gradient-to-bl from-[#ff0000]/30 to-[#141212]">
-                    <Image
-                        src="/images/3d-avatar.png"
-                        alt="3D Avatar"
-                        width={400}
-                        height={400}
-                        className="rounded-2xl drop-shadow-xl"
-                    />
-                </div>
-            </div>
-        </div>
+            </motion.div>
+        </main>
     );
 }
