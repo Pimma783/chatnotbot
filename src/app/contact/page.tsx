@@ -1,12 +1,12 @@
 "use client";
 import { createContext, useContext, useState, useEffect } from "react";
-import React from 'react'; // Import React for React.ReactNode
+import React from 'react';
 
 // 1. กำหนด Interface ของ Context
 interface AuthContextType {
     isLoggedIn: boolean;
-    // เพิ่มสถานะการโหลดเพื่อบอกว่าตรวจสอบ localStorage เสร็จแล้ว
-    isLoading: boolean;
+    // สถานะการโหลด: true ขณะกำลังตรวจสอบ localStorage, false เมื่อเสร็จสิ้น
+    isLoading: boolean; 
     login: () => void;
     logout: () => void;
 }
@@ -14,8 +14,8 @@ interface AuthContextType {
 // 2. สร้าง Context และกำหนดค่าเริ่มต้น
 const AuthContext = createContext<AuthContextType>({
     isLoggedIn: false,
-    // กำหนดให้เริ่มต้นเป็น true (กำลังโหลด)
-    isLoading: true,
+    // เริ่มต้นเป็น true เพื่อให้คอมโพเนนต์ลูกรู้ว่ากำลังรอการโหลดสถานะจริง
+    isLoading: true, 
     login: () => { },
     logout: () => { },
 });
@@ -23,21 +23,21 @@ const AuthContext = createContext<AuthContextType>({
 // 3. Auth Provider Component
 export function AuthProvider({ children }: { children: React.ReactNode }) {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [isLoading, setIsLoading] = useState(true); // สถานะการโหลด
+    const [isLoading, setIsLoading] = useState(true);
 
     // ตรวจสอบสถานะการล็อกอินจาก localStorage เมื่อคอมโพเนนต์ Mount
     useEffect(() => {
-        // โค้ดนี้จะทำงานบน Client-side เท่านั้น
+        // การเข้าถึง localStorage ต้องทำภายใน useEffect (Client-side)
         const loggedIn = localStorage.getItem("isLoggedIn") === "true";
         setIsLoggedIn(loggedIn);
-        // เมื่อดึงค่าจาก localStorage เสร็จสิ้น ให้ตั้งค่า isLoading เป็น false
-        setIsLoading(false);
+        // ตั้งค่าให้โหลดเสร็จสิ้น
+        setIsLoading(false); 
     }, []);
 
     const login = () => {
-        // ตรวจสอบว่าเป็น Client-side ก่อน (เพื่อความปลอดภัย แม้จะอยู่ใน "use client" แล้ว)
+        // ใช้ typeof window !== 'undefined' เป็นการป้องกันที่ดีเยี่ยม
         if (typeof window !== 'undefined') {
-            localStorage.setItem("isLoggedIn", "true");
+             localStorage.setItem("isLoggedIn", "true");
         }
         setIsLoggedIn(true);
     };
