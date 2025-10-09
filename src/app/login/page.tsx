@@ -2,19 +2,21 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/context/AuthContext"; // import Context
 
 export default function LoginPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const router = useRouter();
+    const { login } = useAuth(); // ดึง login function จาก Context
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        // ตัวอย่างจำลองการเข้าสู่ระบบ
+        // ตรวจสอบตัวอย่างจำลอง
         if (email && password) {
-            localStorage.setItem("authToken", "dummy_token");
-            router.push("/");
+            login(); // อัปเดต Context ทันที
+            router.push("/"); // ไปหน้า Home
         }
     };
 
@@ -26,7 +28,6 @@ export default function LoginPage() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="w-full max-w-md bg-[#011100]/80 border border-green-700/20 backdrop-blur-lg rounded-2xl shadow-xl p-8"
             >
-                {/* หัวข้อหน้า */}
                 <h1 className="text-3xl font-bold text-center text-white mb-4">
                     เข้าสู่ระบบ
                 </h1>
@@ -35,12 +36,9 @@ export default function LoginPage() {
                     <span className="text-green-400 font-semibold">ChatBot MJU</span>
                 </p>
 
-                {/* ฟอร์มล็อกอิน */}
                 <form onSubmit={handleSubmit} className="space-y-5">
                     <div>
-                        <label className="block text-gray-200 text-sm mb-2">
-                            อีเมล
-                        </label>
+                        <label className="block text-gray-200 text-sm mb-2">อีเมล</label>
                         <input
                             type="email"
                             value={email}
@@ -52,9 +50,7 @@ export default function LoginPage() {
                     </div>
 
                     <div>
-                        <label className="block text-gray-200 text-sm mb-2">
-                            รหัสผ่าน
-                        </label>
+                        <label className="block text-gray-200 text-sm mb-2">รหัสผ่าน</label>
                         <input
                             type="password"
                             value={password}

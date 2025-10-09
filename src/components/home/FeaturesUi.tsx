@@ -6,7 +6,7 @@ const newsList = [
     {
         title: "ผู้บริหาร ม.แม่โจ้ ร่วมแสดงความยินดีกับผู้ว่าราชการจังหวัดเชียงใหม่",
         date: "07 ตุลาคม 2568",
-        img: "/images/1.png", // อัปโหลดรูปภาพของข่าวนี้
+        img: "/images/1.png",
     },
     {
         title: "คณะกรรมการส่งเสริมฯ มอบทุนสำหรับหลักสูตรประกาศนียบัตรพนักงานให้การ",
@@ -22,7 +22,7 @@ const newsList = [
 
 export default function NewsUi() {
     return (
-        <section className="w-full flex flex-col items-center justify-center text-center bg-gradient-to-b from-[#001100] via-[#002200] to-[#001100] py-20">
+        <section className="w-full flex flex-col items-center justify-center text-center bg-white py-20">
             <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -30,7 +30,9 @@ export default function NewsUi() {
                 viewport={{ once: true }}
                 className="relative z-10 flex flex-col items-center mb-14 px-4"
             >
-                <h2 className="text-4xl font-bold text-white mb-2">ข่าวสารและกิจกรรม</h2>
+                <h2 className="text-4xl font-bold text-green-900 mb-2">
+                    ข่าวสารและกิจกรรม
+                </h2>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-7xl px-6 md:px-12">
@@ -44,9 +46,9 @@ export default function NewsUi() {
                             delay: index * 0.2,
                             ease: "easeOut",
                         }}
-                        className="bg-[#011100]/80 border border-green-700/20 backdrop-blur-lg 
-                       rounded-2xl overflow-hidden hover:border-green-500/40 hover:shadow-green-600/30 
-                       hover:shadow-lg transition-all duration-300"
+                        className="bg-white border border-green-300 
+                        rounded-2xl overflow-hidden hover:border-green-600 
+                        hover:shadow-lg hover:shadow-green-200 transition-all duration-300"
                     >
                         <div className="relative w-full h-48">
                             <Image
@@ -57,8 +59,10 @@ export default function NewsUi() {
                             />
                         </div>
                         <div className="p-6 text-left">
-                            <h3 className="text-lg font-semibold text-white mb-2">{news.title}</h3>
-                            <p className="text-gray-400 text-sm">{news.date}</p>
+                            <h3 className="text-lg font-semibold text-green-900 mb-2">
+                                {news.title}
+                            </h3>
+                            <p className="text-gray-600 text-sm">{news.date}</p>
                         </div>
                     </motion.div>
                 ))}

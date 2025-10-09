@@ -1,35 +1,60 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function HeroUi() {
+    const [bubbles, setBubbles] = useState<
+        { top: string; left: string; delay: string }[]
+    >([]);
+
+    useEffect(() => {
+        // สุ่มจุดแสงพื้นหลังเฉพาะฝั่ง client
+        const newBubbles = Array.from({ length: 30 }).map(() => ({
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+            delay: `${Math.random() * 2}s`,
+        }));
+        setBubbles(newBubbles);
+    }, []);
+
     return (
         <section className="relative flex flex-col items-center justify-center text-center w-full min-h-screen px-6 bg-gradient-to-br from-black via-[#001a00] to-[#003300] overflow-hidden">
             {/* พื้นหลังเอฟเฟกต์ */}
             <div className="absolute inset-0 z-0">
-                {Array.from({ length: 30 }).map((_, i) => (
+                {bubbles.map((b, i) => (
                     <div
                         key={i}
                         className="absolute bg-green-400 rounded-full opacity-30 w-1 h-1 animate-pulse"
                         style={{
-                            top: `${Math.random() * 100}%`,
-                            left: `${Math.random() * 100}%`,
-                            animationDelay: `${Math.random() * 2}s`,
+                            top: b.top,
+                            left: b.left,
+                            animationDelay: b.delay,
                         }}
                     />
                 ))}
+
+                {/* เส้นแนวตั้ง */}
                 {Array.from({ length: 10 }).map((_, i) => (
                     <div
-                        key={i}
+                        key={`v-${i}`}
                         className="absolute bg-green-500/20 w-[2px] h-full animate-pulse-slow"
-                        style={{ left: `${i * 10 + 5}%`, animationDelay: `${i * 0.3}s` }}
+                        style={{
+                            left: `${i * 10 + 5}%`,
+                            animationDelay: `${i * 0.3}s`,
+                        }}
                     />
                 ))}
+
+                {/* เส้นแนวนอน */}
                 {Array.from({ length: 10 }).map((_, i) => (
                     <div
-                        key={i}
+                        key={`h-${i}`}
                         className="absolute bg-green-500/20 h-[2px] w-full animate-pulse-slow"
-                        style={{ top: `${i * 10 + 5}%`, animationDelay: `${i * 0.3}s` }}
+                        style={{
+                            top: `${i * 10 + 5}%`,
+                            animationDelay: `${i * 0.3}s`,
+                        }}
                     />
                 ))}
             </div>
@@ -43,9 +68,9 @@ export default function HeroUi() {
             >
                 <h1 className="mb-6">
                     <Image
-                        src="/images/logo_chatbot.png" // path ของโลโก้
+                        src="/images/logo_chatbot.png"
                         alt="ChatBot MJU Logo"
-                        width={300}  // ปรับขนาดตามต้องการ
+                        width={300}
                         height={300}
                         className="object-contain"
                     />

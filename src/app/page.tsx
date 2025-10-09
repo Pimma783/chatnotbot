@@ -1,19 +1,15 @@
 "use client";
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import HeroUi from "@/components/home/HeroUi";
 import FeaturesUi from "@/components/home/FeaturesUi";
+import { useAuth } from "@/context/AuthContext";
 
 export default function HomePage() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    const loggedIn = localStorage.getItem("authToken") ? true : false;
-    setIsLoggedIn(loggedIn);
-  }, []);
+  const { isLoggedIn } = useAuth(); // ดึง state จาก Context
 
   return (
-    <main className="flex flex-col items-center min-h-screen bg-gradient-to-b from-white via-[#f8f9f9] to-[#eef0ef] text-gray-900">
+    <main className="flex flex-col items-center min-h-screen bg-gradient-to-b from-white via-[#f8f9f9] to-[#eef0ef] text-gray-900 relative">
       {/* Hero Section */}
       <HeroUi />
 
@@ -35,6 +31,26 @@ export default function HomePage() {
             เข้าสู่ระบบเพื่อใช้งานฟีเจอร์แชทอัจฉริยะของ{" "}
             <span className="text-emerald-700 font-semibold">ChatBot Mju</span>
           </p>
+        </motion.div>
+      )}
+
+      {/* Floating Chat Button */}
+      {isLoggedIn && (
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="fixed bottom-8 right-8 z-50"
+        >
+          <Link href="/chat">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 px-6 rounded-full shadow-lg transition-colors"
+            >
+              💬 ไปยังหน้าแชท
+            </motion.button>
+          </Link>
         </motion.div>
       )}
     </main>

@@ -26,12 +26,6 @@ export default function HeaderUi() {
                     ChatBot<span className="text-gray-800">Mju</span>
                 </Link>
 
-                {/* Menu */}
-                <nav className="hidden md:flex items-center gap-6 text-gray-700">
-                    <Link href="/" className="hover:text-emerald-700 transition">Home</Link>
-                    <Link href="/chat" className="hover:text-emerald-700 transition">Chat</Link>
-                </nav>
-
                 {/* Buttons */}
                 {isLoggedIn ? (
                     <button
