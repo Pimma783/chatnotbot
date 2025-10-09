@@ -2,31 +2,36 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import React from 'react';
 
-// 1. กำหนด Interface ของ Context
 interface AuthContextType {
     isLoggedIn: boolean;
+<<<<<<< HEAD
     // สถานะการโหลด: true ขณะกำลังตรวจสอบ localStorage, false เมื่อเสร็จสิ้น
     isLoading: boolean; 
+=======
+    isLoading: boolean;
+>>>>>>> fb38a1a695c4a79975c2143ec6e009a32835e97d
     login: () => void;
     logout: () => void;
 }
 
-// 2. สร้าง Context และกำหนดค่าเริ่มต้น
 const AuthContext = createContext<AuthContextType>({
     isLoggedIn: false,
+<<<<<<< HEAD
     // เริ่มต้นเป็น true เพื่อให้คอมโพเนนต์ลูกรู้ว่ากำลังรอการโหลดสถานะจริง
     isLoading: true, 
+=======
+    isLoading: true,
+>>>>>>> fb38a1a695c4a79975c2143ec6e009a32835e97d
     login: () => { },
     logout: () => { },
 });
 
-// 3. Auth Provider Component
 export function AuthProvider({ children }: { children: React.ReactNode }) {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
 
-    // ตรวจสอบสถานะการล็อกอินจาก localStorage เมื่อคอมโพเนนต์ Mount
     useEffect(() => {
+<<<<<<< HEAD
         // การเข้าถึง localStorage ต้องทำภายใน useEffect (Client-side)
         const loggedIn = localStorage.getItem("isLoggedIn") === "true";
         setIsLoggedIn(loggedIn);
@@ -39,13 +44,20 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         if (typeof window !== 'undefined') {
              localStorage.setItem("isLoggedIn", "true");
         }
+=======
+        const loggedIn = localStorage.getItem("isLoggedIn") === "true";
+        setIsLoggedIn(loggedIn);
+        setIsLoading(false);
+    }, []);
+
+    const login = () => {
+        localStorage.setItem("isLoggedIn", "true");
+>>>>>>> fb38a1a695c4a79975c2143ec6e009a32835e97d
         setIsLoggedIn(true);
     };
 
     const logout = () => {
-        if (typeof window !== 'undefined') {
-            localStorage.removeItem("isLoggedIn");
-        }
+        localStorage.removeItem("isLoggedIn");
         setIsLoggedIn(false);
     };
 
@@ -56,5 +68,4 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     );
 }
 
-// 4. Custom Hook สำหรับใช้งาน
 export const useAuth = () => useContext(AuthContext);
