@@ -1,36 +1,39 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react"; // Import useState และ useEffect
+
+// Type สำหรับ style ของจุดแต่ละจุด
+type DotStyle = {
+    top: string;
+    left: string;
+    animationDelay: string;
+};
 
 export default function HeroUi() {
-    const [bubbles, setBubbles] = useState<
-        { top: string; left: string; delay: string }[]
-    >([]);
+    const [randomDots, setRandomDots] = useState<DotStyle[]>([]);
 
     useEffect(() => {
-        // สุ่มจุดแสงพื้นหลังเฉพาะฝั่ง client
-        const newBubbles = Array.from({ length: 30 }).map(() => ({
+        // สร้างจุดสุ่ม 30 จุด
+        const dots: DotStyle[] = Array.from({ length: 30 }).map(() => ({
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`,
-            delay: `${Math.random() * 2}s`,
+            animationDelay: `${Math.random() * 2}s`,
         }));
-        setBubbles(newBubbles);
-    }, []);
+        setRandomDots(dots);
+    }, []); // ทำงานครั้งเดียวตอนโหลด component
 
     return (
         <section className="relative flex flex-col items-center justify-center text-center w-full min-h-screen px-6 bg-gradient-to-br from-black via-[#001a00] to-[#003300] overflow-hidden">
+
             {/* พื้นหลังเอฟเฟกต์ */}
             <div className="absolute inset-0 z-0">
-                {bubbles.map((b, i) => (
+                {/* จุดสุ่ม */}
+                {randomDots.map((style, i) => (
                     <div
                         key={i}
                         className="absolute bg-green-400 rounded-full opacity-30 w-1 h-1 animate-pulse"
-                        style={{
-                            top: b.top,
-                            left: b.left,
-                            animationDelay: b.delay,
-                        }}
+                        style={style}
                     />
                 ))}
 
